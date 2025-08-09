@@ -12,6 +12,6 @@
   "scripts": {
     "install": "cd client && npm install && cd ../node && npm install",
     "build": "cd client && npm run build",
-    "start": "node node/server.js"
+    "start": "node node/query.js"
   }
 }
