@@ -53,8 +53,8 @@ function App() {
     const submitForm = async (seed) => {
         const API_BASE = process.env.API_URL || '';
         //console.log(API_BASE);
-        //const response = await axios.post(${API_BASE}/query, {
-        const response = await axios.post("http://localhost:3001/query", {
+        const response = await axios.post(`${API_BASE}/query`, {
+        //const response = await axios.post("http://localhost:3001/query", {
             seed: seed
         });
 
