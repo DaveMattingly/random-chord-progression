@@ -8,10 +8,5 @@
     "strip-bom-stream": "^5.0.0",
     "tonal": "^6.4.2",
     "workspace": "github:tonaljs/tonal"
-  },
-  "scripts": {
-    "install": "cd client && npm install && cd ../node && npm install",
-    "build": "cd client && npm run build",
-    "start": "node node/query.js"
   }
 }
