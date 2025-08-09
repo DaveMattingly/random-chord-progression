@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(cors()); // Allow frontend access
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 function getNextChord(prior, rng) {
     let chords = [];
@@ -157,8 +158,6 @@ app.post('/query', (req, res) => {
     console.log(responsePayload);
     res.json(responsePayload || {});
 });
-
-app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/{*any}', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'))
